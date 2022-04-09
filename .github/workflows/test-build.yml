@@ -23,6 +23,9 @@ jobs:
           keyStorePassword: ${{ secrets.KEYSTOREPASSWORD }}
           keyPassword: ${{ secrets.KEYPASSWORD }}
 
+      - name: Build AAB
+        run: bash ./gradlew bundleRelease
+
       - name: Sign AAB
         id: sign_aab
         uses: r0adkll/sign-android-release@v1
