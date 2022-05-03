@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    android:id="@+id/parentLayout"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <com.google.android.material.textfield.TextInputEditText
+        android:layout_centerInParent="true"
+        android:layout_margin="20dp"
+        android:hint="Type"
+        android:gravity="center"
+        android:id="@+id/textFragmentEditText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@null"
+        android:inputType="textMultiLine"
+        />
+
+    <com.google.android.material.slider.Slider
+        android:id="@+id/textFragmentSlider"
+        android:valueFrom="50"
+        android:valueTo="150"
+        android:value="100"
+        android:stepSize="5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_margin="20dp"
+        />
+
+</RelativeLayout>
