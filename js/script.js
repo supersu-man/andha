@@ -3,6 +3,13 @@ const downloadButton2 = document.getElementById('downloadButton2')
 
 const toggle = document.getElementById('themeSwitch')
 const body = document.body
+const slider = document.getElementById('slider');
+const textContainer = document.getElementById('text-container')
+
+textContainer.style.fontSize = '100px'
+slider.oninput = () => {
+    textContainer.style.fontSize = slider.value * 2 + 'px'
+}
 
 if (localStorage.getItem('dark-theme')) {
     body.classList.remove('light-theme')
@@ -10,7 +17,7 @@ if (localStorage.getItem('dark-theme')) {
     toggle.setAttribute('checked', 'true')
 }
 
-toggle.addEventListener('change', () => {
+toggle.onchange = () => {
     if (toggle.checked) {
         body.classList.remove('light-theme')
         body.classList.add('dark-theme')
@@ -20,7 +27,7 @@ toggle.addEventListener('change', () => {
         body.classList.remove('dark-theme')
         localStorage.removeItem('dark-theme')
     }
-})
+}
 
 downloadButton1.addEventListener('click', () => {
     window.open('https://github.com/supersu-man/andha/releases', '_self')

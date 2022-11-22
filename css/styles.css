@@ -44,3 +44,21 @@ body {
 [contentEditable=true]:empty:not(:focus):before {
 	content: attr(data-text)
 }
+
+input[type="range"] {
+	appearance: none;
+	border-radius: 10px;
+	background-color: var(--md-sys-color-surface-variant);
+	cursor: pointer;
+	border-color: var(--md-sys-color-primary);
+	border-width: 1px;
+	border-style: solid;
+}
+
+input[type="range"]::-webkit-slider-thumb {
+	appearance: none;
+	width: 16px;
+	height: 16px;
+	background-color: var(--md-sys-color-primary);
+	border-radius: 50%;
+}
